@@ -50,7 +50,8 @@ No symbol table is loaded.  Use the "file" command.
 (gdb) print 0x86342
 $1 = 549698
 ```
-![alt text](image-2.png)
+<img width="704" height="338" alt="image" src="https://github.com/user-attachments/assets/53e49e1e-60dd-4e02-af70-577851f3e108" />
+
 
 
 ## Flag:
@@ -72,3 +73,4 @@ picoCTF{549698}
 
 
 - https://www.geeksforgeeks.org/c/gdb-step-by-step-introduction/
+
