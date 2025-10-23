@@ -66,11 +66,39 @@ picoCTF{549698}
 
 ## Notes:
 
-- i tried the gdb online debugger and tried to debug it using the assembly mode in the language section. but then i found that it can run on linux terminal so i installed the gdb debugger into mmy wsl terminal.
-- 
+- i tried the gdb online debugger and tried to debug it using the assembly mode in the language section. but then i found that it can run on linux terminal so i installed the gdb debugger into my wsl terminal.
+
+# 2. ARMssembly 1
+
+> For what argument does this program print `win` with variables 85, 6 and 3? File: chall_1.S Flag format: picoCTF{XXXXXXXX} -> (hex, lowercase, no 0x, and 32 bits. ex. 5614267 would be picoCTF{0055aabb})
+
+## Solution:
+
+- I opened the chall_1.S file to view the assembly code. In the first func function, i observed that there is one unknown value in the program along with given values 85,6,and 3 these values are used to carry out some operations. The left bit shift operation(lsl) is used on the number 85 with 6 as number of places shifted. Then this new number is divided with 3 using the sdiv operation then this result is finally subtracted with the unknown value using sub operation. In the main function, the final result is checked if it is 0 using cmp operation and if it turns out to be 0 then win is printed. So this final value when converted into hexadecimal is the flag.  
+ the func function 
+<img width="397" height="646" alt="image" src="https://github.com/user-attachments/assets/b657a7dc-0b1d-4af9-bad4-8bb024f396be" />
+
+the main function
+<img width="461" height="734" alt="image" src="https://github.com/user-attachments/assets/af2a224a-c539-4450-b141-fecbd8b019f6" />
+
+
+
+## Flag:
+
+```
+picoCTF{00000715}
+```
+
+## Concepts learnt:
+
+- I learnt how to read ARM assembly code and interpret it to know how the program works.
+
+## Notes:
+
+- I didn't know ARM assembly code before this so i just learnt what each syntax meant and what it did to understand what the program what doing.
 
 ## Resources:
 
 
-- https://www.geeksforgeeks.org/c/gdb-step-by-step-introduction/
+- (https://developer.arm.com/documentation/107829/0201/Example--decrement-until-equal/Investigate-NZCV-flags-with-Arm-Development-Studio)
 
