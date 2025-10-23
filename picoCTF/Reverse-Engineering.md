@@ -28,7 +28,8 @@ Non-debugging symbols:
 0x00000000000011b0  __libc_csu_fini
 0x00000000000011b8  _fini
 ```
-![alt text](image-1.png)
+<img width="704" height="338" alt="image" src="https://github.com/user-attachments/assets/44f24b46-e6af-4677-8906-bbc7c858872c" />
+
 
 ```bash
 (gdb) disassemble main
@@ -68,5 +69,6 @@ picoCTF{549698}
 - 
 
 ## Resources:
+
 
 - https://www.geeksforgeeks.org/c/gdb-step-by-step-introduction/
