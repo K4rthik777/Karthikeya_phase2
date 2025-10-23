@@ -96,11 +96,12 @@ picoCTF{00000715}
 
 ## Notes:
 
-- I didn't know ARM assembly code before this so i just learnt what each syntax meant and what it did to understand what the program what doing.
+- I didn't know ARM assembly code before this so i just learnt what each syntax meant and what it did to understand what the program was doing.
 
 ## Resources:
 
 
 - (https://developer.arm.com/documentation/107829/0201/Example--decrement-until-equal/Investigate-NZCV-flags-with-Arm-Development-Studio)
+
 
 
