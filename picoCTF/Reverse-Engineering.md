@@ -76,11 +76,12 @@ picoCTF{549698}
 
 - I opened the chall_1.S file to view the assembly code. In the first func function, i observed that there is one unknown value in the program along with given values 85,6,and 3 these values are used to carry out some operations. The left bit shift operation(lsl) is used on the number 85 with 6 as number of places shifted. Then this new number is divided with 3 using the sdiv operation then this result is finally subtracted with the unknown value using sub operation. In the main function, the final result is checked if it is 0 using cmp operation and if it turns out to be 0 then win is printed. So this final value when converted into hexadecimal is the flag.  
  the func function 
+
 <img width="397" height="646" alt="image" src="https://github.com/user-attachments/assets/b657a7dc-0b1d-4af9-bad4-8bb024f396be" />
 
 the main function
-<img width="461" height="734" alt="image" src="https://github.com/user-attachments/assets/af2a224a-c539-4450-b141-fecbd8b019f6" />
 
+<img width="328" height="827" alt="image" src="https://github.com/user-attachments/assets/496972d4-a01a-45ed-9134-5781469881e0" />
 
 
 ## Flag:
@@ -101,4 +102,5 @@ picoCTF{00000715}
 
 
 - (https://developer.arm.com/documentation/107829/0201/Example--decrement-until-equal/Investigate-NZCV-flags-with-Arm-Development-Studio)
+
 
