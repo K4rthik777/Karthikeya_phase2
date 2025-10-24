@@ -111,6 +111,56 @@ picoCTF{00000715}
 
 - In the jave code given i understood that the flag was being entered and was shuffled in a specifc manner using the checkPassword function to match a key string in the code.I used a python code to reverse this process and got to the correct password. 
 
+the checkPassword function
+
+```java 
+public boolean checkPassword(String password) {
+        if (password.length() != 32) {
+            return false;
+        }
+        char[] buffer = new char[32];
+        int i;
+        for (i=0; i<8; i++) {
+            buffer[i] = password.charAt(i);
+        }
+        for (; i<16; i++) {
+            buffer[i] = password.charAt(23-i);
+        }
+        for (; i<32; i+=2) {
+            buffer[i] = password.charAt(46-i);
+        }
+        for (i=31; i>=17; i-=2) {
+            buffer[i] = password.charAt(i);
+        }
+        String s = new String(buffer);
+        return s.equals("jU5t_a_sna_3lpm18gb41_u_4_mfr340");
+```
+my python code for reversing the shuffled string
+
+```python
+s="jU5t_a_sna_3lpm18gb41_u_4_mfr340"
+l= list(s)
+p= [''] * 32
+for i in range(8):
+    p[i] = l[i]
+for i in range(16, 3):
+  p[23-i]=l[i]
+
+for i in range(16,32,2):
+    p[46-i]=l[i]
+
+for i in range(17,32,2):
+    p[i]=l[i]
+
+result = "".join(p) 
+
+print(result)
+```
+
+Output of the python code
+
+<img width="546" height="59" alt="image" src="https://github.com/user-attachments/assets/b0c0d5a9-c495-4410-bcdf-a74bf4cea9d1" />
+
 ## Flag:
 
 ```
@@ -128,6 +178,7 @@ picoCTF{jU5t_a_s1mpl3_an4gr4m_4_u_1fb380}
 ## Resources:
 
 -  (https://www.w3schools.com/java/ref_string_charat.asp)
+
 
 
 
