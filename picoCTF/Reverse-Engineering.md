@@ -103,5 +103,31 @@ picoCTF{00000715}
 
 - (https://developer.arm.com/documentation/107829/0201/Example--decrement-until-equal/Investigate-NZCV-flags-with-Arm-Development-Studio)
 
+# 3. vault-door-3
+
+> This vault uses for-loops and byte arrays. The source code for this vault is here: VaultDoor3.java
+
+## Solution:
+
+- In the jave code given i understood that the flag was being entered and was shuffled in a specifc manner using the checkPassword function to match a key string in the code.I used a python code to reverse this process and got to the correct password. 
+
+## Flag:
+
+```
+picoCTF{jU5t_a_s1mpl3_an4gr4m_4_u_1fb380}
+```
+
+## Concepts learnt:
+
+- I learnt how to interpret the working of for-loops and string handling functions in a java code.
+
+## Notes:
+
+- I got the basic idea on what the program was trying to do and after knowing what each function like charAt() did , i understood that reversing the proccess would work.
+
+## Resources:
+
+-  (https://www.w3schools.com/java/ref_string_charat.asp)
+
 
 
