@@ -143,7 +143,7 @@ l= list(s)
 p= [''] * 32
 for i in range(8):
     p[i] = l[i]
-for i in range(16, 3):
+for i in range(3, 16):
   p[23-i]=l[i]
 
 for i in range(16,32,2):
@@ -178,6 +178,7 @@ picoCTF{jU5t_a_s1mpl3_an4gr4m_4_u_1fb380}
 ## Resources:
 
 -  (https://www.w3schools.com/java/ref_string_charat.asp)
+
 
 
 
