@@ -159,7 +159,10 @@ print(result)
 
 Output of the python code
 
-<img width="546" height="59" alt="image" src="https://github.com/user-attachments/assets/b0c0d5a9-c495-4410-bcdf-a74bf4cea9d1" />
+```bash
+karthik777@Karthikeya:~$ python3 Rev_proc.py
+jU5t_a_s1mpl3_an4gr4m_4_u_1fb380
+```
 
 ## Flag:
 
@@ -178,6 +181,7 @@ picoCTF{jU5t_a_s1mpl3_an4gr4m_4_u_1fb380}
 ## Resources:
 
 -  (https://www.w3schools.com/java/ref_string_charat.asp)
+
 
 
 
