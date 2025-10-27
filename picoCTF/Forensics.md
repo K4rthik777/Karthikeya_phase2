@@ -70,12 +70,13 @@ picoCTF{beep_boop_im_in_space}
 
 ## Concepts learnt:
 
-- I learned how tftp works to send data and how we extract files sent using this tftp in wireshark and also found how to use steghide to get encrypted info from images. 
+- I learned how SSTV software can be used to encrypt any image into an audio file using audio tones.
 
 ## Notes:
 
-- i kept trying out different option which were shown for each log in the wireshark when u right clicked and thought something might work to get the file but none worked.
+- i kept trying out different stegnagraphic tools might work to get the flag but none worked.I thought maybe this challenge had something to do with stegnagraphy but it wasn't.
 
 ## Resources:
+- (https://vu2nsb.com/cw-digital-radio/slow-scan-tv-sstv/)
 
 -  (https://www.reddit.com/r/wireshark/comments/6ndvpq/extract_tftp_file_from_pcapng/)
