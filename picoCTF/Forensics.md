@@ -57,6 +57,28 @@ picoCTF{jU5t_a_s1mpl3_an4gr4m_4_u_1fb380}
 
 - i couldn't open the file initailly so i tried looking its bytes to know more about the file. I found that this file had the initial bytes of a .bmp file so one checking further i gound that its DIB bytes were not the usual ones so i changed it to the standard bytes (28 00 00 00) but this only got me a portion of the image which said it wasn't the flag. So i then tried playing around with its width and height and when i cahnged the height to (32 03 00 00 ) the flag was shown in the image.
 
+- the original bytes of the bmp file
+
+<img width="843" height="409" alt="Screenshot 2025-10-24 231148" src="https://github.com/user-attachments/assets/3417af1f-19cf-4c8d-9515-96ec047638d8" />
+
+
+- the changed DIB bytes of the given file
+
+<img width="1831" height="898" alt="Screenshot 2025-10-27 200938" src="https://github.com/user-attachments/assets/98061ee2-9716-4b84-a11b-120a6de22da2" />
+
+- The image after this
+
+<img width="1719" height="459" alt="image" src="https://github.com/user-attachments/assets/71692726-7d77-4f85-a262-b7e11eb33a72" />
+
+- the changed height bytes of the bmp file:
+
+<img width="1774" height="927" alt="Screenshot 2025-10-27 201414" src="https://github.com/user-attachments/assets/ef2cdd3b-caee-4f78-938c-5a937fb62c3a" />
+
+- the final image:
+
+<img width="1146" height="827" alt="image" src="https://github.com/user-attachments/assets/e742fd32-5f2b-4e84-afab-ece45d17524a" />
+
+
 ## Flag:
 
 ```
