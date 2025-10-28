@@ -49,6 +49,33 @@ picoCTF{jU5t_a_s1mpl3_an4gr4m_4_u_1fb380}
 
 -  (https://www.reddit.com/r/wireshark/comments/6ndvpq/extract_tftp_file_from_pcapng/)
 
+# 2. tunn3l v1s10n
+
+>We found this file. Recover the flag.
+
+## Solution:
+
+- i couldn't open the file initailly so i tried looking its bytes to know more about the file. I found that this file had the initial bytes of a .bmp file so one checking further i gound that its DIB bytes were not the usual ones so i changed it to the standard bytes (28 00 00 00) but this only got me a portion of the image which said it wasn't the flag. So i then tried playing around with its width and height and when i cahnged the height to (32 03 00 00 ) the flag was shown in the image.
+
+## Flag:
+
+```
+picoCTF{qu1t3_a_v13w_2020}
+```
+
+## Concepts learnt:
+
+-  i learned how each byte of a bmp file is associated with one of its file attributes.
+
+## Notes:
+
+- I kept changing the bytes to wrong ones and was not getting to open the bmp file as only specific litte endian values could get the right image configuration.
+
+## Resources:
+
+-  (https://www.youtube.com/watch?v=kpHFFFu9qeU)
+
+
 # 3. m00nwalk
 
 > Decode this message from the moon.
