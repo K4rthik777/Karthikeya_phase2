@@ -156,30 +156,4 @@ picoCTF{custom_d2cr0pt6d_8b41f976}
 
 -  (https://www.geeksforgeeks.org/computer-networks/diffie-hellman-key-exchange-and-perfect-forward-secrecy/)
 
-# 3.miniRSA
 
->Let's decrypt this: ciphertext? Something seems a bit small.
-
-## Solution:
-
-- I 
-
-```python
-
-```
-
-## Flag:
-
-```
-
-```
-
-## Concepts learnt:
-
-- i learned about how 
-
-## Notes:
-
-## Resources:
-
--  ()
