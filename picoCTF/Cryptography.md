@@ -151,7 +151,7 @@ picoCTF{custom_d2cr0pt6d_8b41f976}
 
 ## Notes:
 
-- i was directly trying to get the password.enc decrypted by the oracle but it kept failing.
+
 
 ## Resources:
 
