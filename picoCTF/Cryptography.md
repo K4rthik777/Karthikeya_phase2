@@ -72,7 +72,7 @@ picoCTF{su((3ss_(r@ck1ng_r3@_60f50766}
 
 -  (https://en.wikipedia.org/wiki/Padding_oracle_attack)
 
-# 1.Custom encryption
+# 2.Custom encryption
 
 >Can you get sense of this code file and write the function that will decode the given encrypted file content.
 Find the encrypted file here flag_info and code file might be good to analyze and get the flag.
@@ -150,8 +150,6 @@ picoCTF{custom_d2cr0pt6d_8b41f976}
 - i learned about how different python functions can be created to encrypt and decrypt data in many custom ways.
 
 ## Notes:
-
-
 
 ## Resources:
 
