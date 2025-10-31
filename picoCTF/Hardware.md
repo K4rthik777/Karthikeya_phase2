@@ -1,6 +1,13 @@
-# 1. trivial flag transfer protocol
+# 1. IQ Test
 
->Figure out how they moved the flag.
+> let your input x = 30478191278.
+
+wrap your answer with nite{ } for the flag.
+
+As an example, entering x = 34359738368 gives (y0, ..., y11), so the flag would be nite{010000000011}.
+
+<img width="1225" height="2176" alt="iqtest" src="https://github.com/user-attachments/assets/6ccfb3d7-b2f8-4895-8b6a-44e081d53183" />
+
 
 ## Solution:
 
