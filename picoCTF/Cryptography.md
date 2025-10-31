@@ -1,4 +1,4 @@
-# 1. buffer overflow 0
+# 1.RSA oracle
 
 >Can you abuse the oracle?
 An attacker was able to intercept communications between a bank and a fintech company. They managed to get the message (ciphertext) and the password that was used to encrypt the message.
@@ -71,4 +71,90 @@ picoCTF{su((3ss_(r@ck1ng_r3@_60f50766}
 ## Resources:
 
 -  (https://en.wikipedia.org/wiki/Padding_oracle_attack)
+
+# 1.Custom encryption
+
+>Can you get sense of this code file and write the function that will decode the given encrypted file content.
+Find the encrypted file here flag_info and code file might be good to analyze and get the flag.
+
+
+## Solution:
+
+- I checked out the encryption code given and understood how it worked to encrypt.Then i created functions that reversed the effect of the original functiuon in the encryption process.
+
+```python
+from custom_encryption import is_prime, generator
+ 
+ 
+def leak_shared_key(a, b):
+    p = 97
+    g = 31
+    if not is_prime(p) and not is_prime(g):
+        print("Enter prime numbers")
+        return
+    u = generator(g, a, p)
+    v = generator(g, b, p)
+    key = generator(v, a, p)
+    b_key = generator(u, b, p)
+    shared_key = None
+    if key == b_key:
+        shared_key = key
+    else:
+        print("Invalid key")
+        return
+ 
+    return shared_key
+ 
+ 
+def decrypt(ciphertext, key):
+    semi_ciphertext = []
+    for num in ciphertext:
+        semi_ciphertext.append(chr(round(num / (key * 311))))
+    return "".join(semi_ciphertext)
+ 
+ 
+def dynamic_xor_decrypt(semi_ciphertext, text_key):
+    plaintext = ""
+    key_length = len(text_key)
+    for i, char in enumerate(semi_ciphertext):
+        key_char = text_key[i % key_length]
+        decrypted_char = chr(ord(char) ^ ord(key_char))
+        plaintext += decrypted_char
+    return plaintext[::-1]
+ 
+ 
+if __name__ == "__main__":
+    a = 94
+    b = 21
+    ciphertext_arr = [131553, 993956, 964722, 1359381, 43851, 1169360, 950105, 321574, 1081658, 613914, 0, 1213211, 306957, 73085, 993956, 0, 321574, 1257062, 14617, 906254, 350808, 394659, 87702, 87702, 248489, 87702, 380042, 745467, 467744, 716233, 380042, 102319, 175404, 248489]
+    text_key = "trudeau"
+    shared_key = leak_shared_key(a, b)
+ 
+
+    semi_ciphertext = decrypt(ciphertext_arr, shared_key)
+ 
+
+    plaintext = dynamic_xor_decrypt(semi_ciphertext, text_key)
+ 
+    print(plaintext)
+```
+
+## Flag:
+
+```
+picoCTF{custom_d2cr0pt6d_8b41f976}
+```
+
+## Concepts learnt:
+
+- i learned about how different python functions can be created to encrypt and decrypt data in many custom ways.
+
+## Notes:
+
+- i was directly trying to get the password.enc decrypted by the oracle but it kept failing.
+
+## Resources:
+
+-  (https://www.geeksforgeeks.org/computer-networks/diffie-hellman-key-exchange-and-perfect-forward-secrecy/)
+
 
