@@ -71,6 +71,7 @@ picoCTF{su((3ss_(r@ck1ng_r3@_60f50766}
 ## Resources:
 
 -  (https://en.wikipedia.org/wiki/Padding_oracle_attack)
+-  (https://secgroup.dais.unive.it/wp-content/uploads/2012/11/Practical-Padding-Oracle-Attacks-on-RSA.html)
 
 # 2.Custom encryption
 
