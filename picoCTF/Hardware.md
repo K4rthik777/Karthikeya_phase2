@@ -33,3 +33,31 @@ nite{100010011000}
 
 -  (https://www.schoolphysics.co.uk/age16-19/Electronics/Logic%20gates/text/Logic_gates/index.html)
 
+# 2. I like Logic
+
+> i like logic and i like files, apparently, they have something in common, what should my next step be.
+
+## Solution:
+
+- i opened the .sal file in the logi2 software and then used the Async seriel analyzer on the channel 3 and it show the ascii text for the frequency graph and i found the flag among that text.
+
+<img width="1518" height="743" alt="Screenshot 2025-10-31 222106" src="https://github.com/user-attachments/assets/cdc89117-7cdc-4077-b943-9c345c2a2491" />
+
+
+## Flag:
+```
+FCSC{b1dee4eeadf6c4e60aeb142b0b486344e64b12b40d1046de95c89ba5e23a9925}
+```
+
+## Concepts learnt:
+
+- I learned .sal files can be analzyed using the Logic2 software and Async seriel analyzer can be used to get the ascii text.
+
+## Notes:
+
+- i kept using othe analyzers such I2C,SPI and concatenator but they didn't work. 
+
+## Resources:
+
+-  (https://file.org/extension/sal)
+
