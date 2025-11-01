@@ -61,3 +61,33 @@ FCSC{b1dee4eeadf6c4e60aeb142b0b486344e64b12b40d1046de95c89ba5e23a9925}
 
 -  (https://file.org/extension/sal)
 
+
+# 2. BAre Metal Alchemist
+
+> my friend recommended me this anime but i think i've heard a wrong name.
+
+## Solution:
+
+- i opened .elf file in the ghidra software in the code browser tool and looked into the main function. In the main function i understood that some data from the 0x68 memory location in getting decrypted udsing xor by using the key at 0xA5 so i looked the bytes at 0x68 memory location for the xor encrypted data then i found the bytes in the bytes windows in ghidraa and then decrypted them to get the flag. 
+
+The xor encrypted data near the 0x68 memory location:
+<img width="1908" height="1023" alt="image" src="https://github.com/user-attachments/assets/9b56d8f3-1c6c-4acc-97e3-5854fd17d251" />
+
+
+## Flag:
+```
+TFCCTF{Th1s_1s_som3_s1mpl3_4rdun0_f1rmw4re}
+```
+
+## Concepts learnt:
+
+- I learned how ghidra software can be used to analyse a given .elf file and how the bytes at given memory location need to be viewed.
+
+## Notes:
+
+- i kept searching for the 0x68 in the memory map but it couldn't find it and also i kept looking for 68 in the file code to get some clue. 
+
+## Resources:
+
+-  (https://stackoverflow.com/questions/66176544/decrypt-encrypt-xor-algorithm-in-c)
+
