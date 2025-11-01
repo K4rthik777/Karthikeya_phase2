@@ -156,4 +156,32 @@ picoCTF{custom_d2cr0pt6d_8b41f976}
 
 -  (https://www.geeksforgeeks.org/computer-networks/diffie-hellman-key-exchange-and-perfect-forward-secrecy/)
 
+# 2.Custom encryption
 
+>Can you get sense of this code file and write the function that will decode the given encrypted file content.
+Find the encrypted file here flag_info and code file might be good to analyze and get the flag.
+
+
+## Solution:
+
+- I checked out the ciphertext file given and found that the given e value was a little too small than usual as the hint also suggested it.Then i found that such small value of e creates a chance for us to bruteforce the decryption by simply using a rsa decoder.So when i decrypted it in the online decoder it gave the flag.
+
+<img width="1362" height="573" alt="image" src="https://github.com/user-attachments/assets/831680c1-da52-4fd8-afc0-2ae3e1baf759" />
+
+
+## Flag:
+
+```
+picoCTF{n33d_a_lArg3r_e_d0cd6eae}
+```
+
+## Concepts learnt:
+
+- i learned about how the value of e being so small cause the rsa encryption to so vulnerable.
+
+## Notes:
+- i tried to use python program as used in the previous challenges but it was becoming complicated as the cipher text and the N values are just too big. 
+
+## Resources:
+
+-  (https://en.wikipedia.org/wiki/RSA_cryptosystem)
