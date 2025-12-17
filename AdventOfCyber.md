@@ -9,8 +9,18 @@ i revised the usage of ls -la command to get hidden files in the pwd and how the
 # 2. Phishing - Merry Clickmas
 
 ## Solution:
-
+i ran the login page script in the terminal using the server.py file. Then i ran the SET using the setoolkit command then selected the social engineering attack called the  Mass Mailer Attack and used it to send an email attack to one of the worker's email using a source email id and fabricated a fake email content to make it believable.This led to the worker typing out the login credentials and the login page got me those and i found that the password was reused for factory user and acessed his mail to get the expected toys quantity. 
 
 The login page script running in the terminal:
+<img width="678" height="478" alt="image" src="https://github.com/user-attachments/assets/09dd06c4-5546-40f0-afcc-1b90f82a4398" />
 
 ## Learnings:
+i learnt about the various applications of Social engineering and it is used to exploit and get access to sensitive data of user by allowing them to be deceived by various media means. Also learnt how setoolkit can be used to create such attack vectors.
+
+# 3. Splunk Basics - Did you SIEM?
+
+## Solution:
+
+
+## Learnings:
+
