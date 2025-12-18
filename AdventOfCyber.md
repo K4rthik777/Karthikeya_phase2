@@ -20,7 +20,17 @@ i learnt about the various applications of Social engineering and it is used to 
 # 3. Splunk Basics - Did you SIEM?
 
 ## Solution:
+i used the splunk application to identify the malicous attacker's activity by searching through the internal logs. I got the attacker's ip address by viewing the highest malicious web traffic from an external ip. On further searching and analysing the web traffic source, we found attempts to find path transversal vulnerabilities and SQL vulnerabilities exploitations. Also the webshell was used for payload delivery. Final confirmation of malicicous activity was given by the connection of the compromised server with the attacker's ip. 
+
+## Learnings:
+I learned how splunk application can be used for searching the internal logs and filter out essential info about attacker's malicicous activities.
+
+
+# 4. 
+
+## Solution:
 
 
 ## Learnings:
+
 
