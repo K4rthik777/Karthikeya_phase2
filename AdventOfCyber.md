@@ -26,9 +26,26 @@ i used the splunk application to identify the malicous attacker's activity by se
 I learned how splunk application can be used for searching the internal logs and filter out essential info about attacker's malicicous activities.
 
 
-# 4. 
+# 4. AI in Security - old sAInt nick
 
-## Solution:
+## Solution: 
+I used the AI tool to get the python script that can exploit the SQL vulnerability of a website. Then it helped to analyse the logs to get info about the attempted exploit which is very essential form Blue team perspective. Then i finally completed the showcase for the first flag and then i used that python with my attack machine ip to get the second flag.
+
+## Learnings:
+I learned how ai tools can be used to create scripts for exploitation and also it can help detect vulnerabilities through analyses of logs.
+
+# 5. IDOR - Santa’s Little IDOR
+
+## Solution: 
+i answered the questions using the info from the description.I kept altering the user id in the local storage using developer tools to find the parent with 10 children.
+
+## Learnings:
+I learned what IDOR was and it can be exploited by the attacked if not prevented.
+
+
+# 6. 
+
+## Solution: 
 
 
 ## Learnings:
