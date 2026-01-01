@@ -120,11 +120,42 @@ I learnt what containers are and how docker application can be used to build, de
 # 15. Web Attack Forensics - Drone Alone
 
 ## Solution:
-
+In the SOFTWARE hive in the attackbox, i searched for any application installed which could have any clue for this challenge and found the DroneManger Updater.Then in Registry Explorer, I searched the user hive for the dispatch.admin user and checked the entries which revealed the application run path. For checking any persistence left behind after the application has run, i checked the SOFTWARE hive again in the run directory and found a suspicious executible called dronehelper.exe
 
 ## Learnings:
+I learned how the hives need to be used to investigate any particular malicious applications and which directories are to be searched for getting info about a particular aspect regarding the application.
 
+# 17. CyberChef - Hoperation Save McSkidy
 
+## Solution:
+I followed the instruction given innthe description of teh challenges and did the encoding of the text into Base64 using cyberchef and also used XOR if mention using the tools in the cyberchef to clear each level of the challenge. I also used the HEX and reverse tools for the last level and got the assword and the final flag.
+
+## Learnings:
+I learnt how Cyberchef tools can used efficiently for any encoding/decoding techniques and also for various functions can be carried out using the Cyberchef application.
+
+# 18. Obfuscation - The Egg Shell File 
+
+## Solution:
+For this part 1, i deobfuscated the given string using "From Base64" and got an url which i pasted into one of the variable and got the first flag. For the part2, i deobfuscated the given string using "XOR" with key as 0x37 and then convert that into hexadecimal and pasted that into another variable in the script and ran it to get the second flag.
+
+## Learnings:
+I learnt how Obfuscation can be used to evade tracking software and exploit the system.
+
+# 19. ICS/Modbus - Claus for Concern 
+
+## Solution:
+For the practical i did a reconnissence of the ports using nmap and found that the port 80 was a HTTPS service port and the port 502 is ModBus TCP.Then i ran reconnissence python to thoroughly checkout the ports but it had fail to restore the ports then i used another python script to restore these ports and this got the flag.
+
+## Learnings:
+I learnt about SCADA systems, ModBus, and PLCs and how these can be exploited by the attackers and how these Modbus ports can be restored by using python scripts.
+
+# 20. Race Conditions - Toy to The World 
+
+## Solution:
+First i placed an order for the Sleigh toy and then went onto the burpsuite to find the POST requestion with /process_checkout. After finding it i sent it to the repeater and create a tab group with multiple duplicates of the original request and then simultaneously sent these request to initiate a race and get the flag.
+
+## Learnings:
+I learnt what race conditions were and how can be triggered by attackers to exploit web applications and also howw to mitigate for such vulnerabilities.
 
 
 
