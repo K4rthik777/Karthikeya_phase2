@@ -157,7 +157,29 @@ First i placed an order for the Sleigh toy and then went onto the burpsuite to f
 ## Learnings:
 I learnt what race conditions were and how can be triggered by attackers to exploit web applications and also howw to mitigate for such vulnerabilities.
 
+# 21. Malware Analysis - Malhare.exe
 
+## Solution:
+I viewed the HTA file in the attacker box using pluma and fouund the title of the application in the header itself.Then i found that there was obfuscationa and social engineering elemnets in this script and found that the function getQuestions in the VBscript was exfiltrating the data using objects.Then i decoded the text given in one of the questions and found it was in Base64 and then  i got the encoded flag which was in ROT13.
+
+## Learnings:
+I learnt how HTA can be used for automation by defenders and also how these can be used to deliver malicious code and launch them directly into the powershell of the desktop.
+
+# 22. C2 Detection - Command & Carol
+
+## Solution:
+I used the zeek command with the challenge pcap file and parse it into a directory in the system - ```bash  zeek readpcap pcaps/rita_challenge.pcap zeek_logs/challenge```. Then i used this command ```bash rita import --logs ~/zeek_logs/challenge/ --database challenge ``` and import the logs data from the pcap file to this new database. Then using this command ```bash rita view challenge ``` i analysed the connections made to the malhare.net and answered the questions.
+
+## Learnings:
+I learnt how to use zeek tool to parse pcap file and also how rita tool can be used to view and analyse the contents of the pcap files by converting required logs data into databases.
+
+# 23. AWS Security - S3cret Santa
+
+## Solution:
+I used the command to get to know the working id ```bash aws sts get-caller-identity``` and then i tried to find the IAM role by using the IAM policies attached to the current id ```bash aws iam list-user-policies --user-name sir.carrotbane ``` with this command. Then i listed all the roles using ```bash aws iam list-roles``` and found a role called buckmaster and listed its policies. I tried to get the temporary credentials to enable me to assume that roles using this command ```bash aws sts assume-role --role-arn arn:aws:iam::123456789012:role/bucketmaster --role-session-name TBFC``` and after getting these detail i export those as variables and assumed that role. With this new role i got access the S3 bucket so i listed all buckets and found one that could contain the flag. So i tried to copy its contents to a txt file to get the flag. 
+
+## Learnings:
+I learnt about the AWS system and how IAM roles are established using userIds, SecretAccessToken and also SessionTokens . Also i learnt how to assume other roles to get additional access permissions to carry out tasks.
 
 
 
