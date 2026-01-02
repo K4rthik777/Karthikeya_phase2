@@ -181,6 +181,13 @@ I used the command to get to know the working id ```bash aws sts get-caller-iden
 ## Learnings:
 I learnt about the AWS system and how IAM roles are established using userIds, SecretAccessToken and also SessionTokens . Also i learnt how to assume other roles to get additional access permissions to carry out tasks.
 
+# 24. Exploitation with cURL - Hoperation Eggsploit 
+
+## Solution:
+First i made a POST request to the /post.php endpoint with the username admin and the password admin using ```bash curl -X POST -d "username=admin&password=admin" http://10.49.156.132/post.php``` to get the first flag. Then i went on to make a request to the /cookie.php endpoint with the username admin and the password admin using ```bash curl -c cookies.txt -d "username=admin&password=admin" http://10.49.156.132/cookie.php```and save the cookie to cookies.txt using ```bash curl -b cookies.txt http://10.49.156.132/cookie.php``` to get the second flag.Then i did the brute force on the /bruteforce.php endpoint using ```bash curl -A "TBFC_SpecialAgent" http://10.49.156.132/agent.php``` and got the third flag. Then i made a request to the /agent.php endpoint with the user-agent TBFC using ```bash curl -A "TBFC_SpecialAgent" http://10.49.156.132/agent.php``` and got the final flag.
+
+## Learnings:
+I learnt how to use curl to send http request to web server in the absence of a browser and also learnt how to bruteforce a user password and access session cookie using user credentials. 
 
 
 
