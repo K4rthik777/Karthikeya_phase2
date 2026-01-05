@@ -16,3 +16,12 @@ For the first lab, i got the admin panel path by accessing the file robots.txt. 
 ### Learnings:
 I learnt how access control can be achieved by exploiting various vulnerabilities like Unprotected functinality, parameter-based methods. Also i learnt how vertical and horizontal privilege escalations can be achieved. 
 
+## Authentication
+
+### Solution:
+For the first lab, i opened the lab in the bur suite browser and intercepted the http requests of user login. Then i highlighted the username entered and sent it to intruder and initiated a snipe attack using the set of usernames given without changing the password yet.After all payloads were tested i found that one particular payload had returned with a different response so that confirmed that was the correct username.Then i intercepted another user login request with correct username and a random password. Then i did the same attack for entered password. Then after observing the payload tests, i found that one of the payloads had strange length value and different status value . I tried logging in using the correct username and this password and it was successful.
+
+For the second lab, i first login into my crendentials and went through the 2FA verification and then accessed the my account page and saw the url path for that page. Then i tried to login to the carlos account and in the verification page , i changed the url path to the mmy account page for carlos and it worked.
+
+### Learnings:
+I learnt how burp suite application is used to intercept and manipulate the HTTp requests sent out to the server and how specific attack methods can be carried out using the intruder tool.
