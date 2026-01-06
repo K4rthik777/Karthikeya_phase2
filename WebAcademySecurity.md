@@ -24,4 +24,12 @@ For the first lab, i opened the lab in the bur suite browser and intercepted the
 For the second lab, i first login into my crendentials and went through the 2FA verification and then accessed the my account page and saw the url path for that page. Then i tried to login to the carlos account and in the verification page , i changed the url path to the mmy account page for carlos and it worked.
 
 ### Learnings:
-I learnt how burp suite application is used to intercept and manipulate the HTTp requests sent out to the server and how specific attack methods can be carried out using the intruder tool.
+I learnt how burp suite application is used to intercept and manipulate the HTTP requests sent out to the server and how specific attack methods can be carried out using the intruder tool.
+
+## Server-side request forgery
+
+### Solution:
+For the first lab, i opened in the burp browser and intercepted the HTTP requests. Then i viewed one of the product stock and in the intercepted request i altered the stockapi to the ```bash http://localhost/admin ``` and got the admin page . There i tried to delete the carlos user but it didn't work. So this time again check the product stock and altered the stock api url but this time i directly changed it to the url to delete the carlos user and it worked.
+
+
+### Learnings:
