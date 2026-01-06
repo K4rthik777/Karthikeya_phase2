@@ -31,5 +31,24 @@ I learnt how burp suite application is used to intercept and manipulate the HTTP
 ### Solution:
 For the first lab, i opened in the burp browser and intercepted the HTTP requests. Then i viewed one of the product stock and in the intercepted request i altered the stockapi to the ```bash http://localhost/admin ``` and got the admin page . There i tried to delete the carlos user but it didn't work. So this time again check the product stock and altered the stock api url but this time i directly changed it to the url to delete the carlos user and it worked.
 
+For the second lab, i followed the same process upto intercepting the stock api url and then i changed it to the /admin page and i highlighted the single 1 in the ip address and sent it to the intruder to test out the range and get the correct number for admin access. i set the range upto 100 and i got the number to be 14 . So i tried accessing the admin page using this and it worked.Then i changed the stock api url to directly delete user carlos.  
 
 ### Learnings:
+I learned how server side vulnerability can be critcal and exploited. Also i learnt how numbers can also be passed as payloads in request using the intruder.
+
+## File upload vulnerability
+
+### Solution:
+For the first lab, i logged into the wiener user account and uploaded random image and checked the request in the proxy tool and observed the the path of the image followed by the server after uploading. Then i created a php file and with this in it ```php <?php echo file_get_contents('/home/carlos/secret'); ?>``` and upload this file to the server. Then i observed a GET request for this php file and i sent it to the Repeater and sent the request to the server and got the secret code.
+
+For the secoond lab, i followed the same process upto intercepting the upload request of php file, there i changed the content-type to image/jpeg and forwarded it. Then i got the GET request for the php file and sent it to the Repeater and sent the request to the server and got the secret code.
+
+### Learnings:
+I learnt how file upload vulnerability can be exploited by manipulating the uploaded file type in the http request using burpsuite's Repeater tool . Also i learnt how php file can be crafted to created webshells to execute any commands as attacker.
+
+## OS command injection
+
+### Solution:
+
+### Learnings:
+
