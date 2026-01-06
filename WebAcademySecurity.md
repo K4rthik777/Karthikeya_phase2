@@ -49,6 +49,17 @@ I learnt how file upload vulnerability can be exploited by manipulating the uplo
 ## OS command injection
 
 ### Solution:
+For this lab, i opened the productID parameter in the repeater and then first i tried using ```bash &whoami&``` as in example but it didn't work.So i tried using or operator instead to get it to execute the command  ```bash |whoami|``` and it worked to give peter as the user.
 
 ### Learnings:
+I learnt how OS command vulnerabilites can easily compromise sensitive info from the internal system.
 
+## SQL injection
+
+### Solution:
+For the first lab, i changed the url to category Gifts to ```bash /products?category=Gifts' OR 1=1--``` and the unreleased product also got shown.
+
+For the second lab, i entered the username as administrator'-- in the login page with a random password and got the access for administrator page.
+
+### Learnings:
+I learnt how SQL injection vulnerability can lead to leakage of sensitive data from internal databases and gives multiple ways for the atttackers to exploit the applications.
