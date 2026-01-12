@@ -110,8 +110,8 @@ I learnt how to write a script using yara rules to scan or get required data usi
 # 14. Containers - DoorDasher's Demise 
 
 ## Solution:
-First i used the command ```bash docker ps ``` to view the running services. Then i tried to access and check out the uptime-checker container and verified that API can be interacted from there by running the docker commands inside the container. Then i went onto check the priviledged container "deployer" using the command
-```bash docker exec -it deployer bash ``` and then ran the recovery_script to recover the app and then catted the flag present in the root directory.
+First i used the command ```docker ps ``` to view the running services. Then i tried to access and check out the uptime-checker container and verified that API can be interacted from there by running the docker commands inside the container. Then i went onto check the priviledged container "deployer" using the command
+``` docker exec -it deployer ``` and then ran the recovery_script to recover the app and then catted the flag present in the root directory.
 
 ## Learnings:
 I learnt what containers are and how docker application can be used to build, deploy and mandge containers.
@@ -168,7 +168,7 @@ I learnt how HTA can be used for automation by defenders and also how these can 
 # 22. C2 Detection - Command & Carol
 
 ## Solution:
-I used the zeek command with the challenge pcap file and parse it into a directory in the system - ```bash  zeek readpcap pcaps/rita_challenge.pcap zeek_logs/challenge```. Then i used this command ```bash rita import --logs ~/zeek_logs/challenge/ --database challenge ``` and import the logs data from the pcap file to this new database. Then using this command ```bash rita view challenge ``` i analysed the connections made to the malhare.net and answered the questions.
+I used the zeek command with the challenge pcap file and parse it into a directory in the system - ``` zeek readpcap pcaps/rita_challenge.pcap zeek_logs/challenge```. Then i used this command ``` rita import --logs ~/zeek_logs/challenge/ --database challenge ``` and import the logs data from the pcap file to this new database. Then using this command ``` rita view challenge ``` i analysed the connections made to the malhare.net and answered the questions.
 
 ## Learnings:
 I learnt how to use zeek tool to parse pcap file and also how rita tool can be used to view and analyse the contents of the pcap files by converting required logs data into databases.
@@ -176,7 +176,7 @@ I learnt how to use zeek tool to parse pcap file and also how rita tool can be u
 # 23. AWS Security - S3cret Santa
 
 ## Solution:
-I used the command to get to know the working id ```bash aws sts get-caller-identity``` and then i tried to find the IAM role by using the IAM policies attached to the current id ```bash aws iam list-user-policies --user-name sir.carrotbane ``` with this command. Then i listed all the roles using ```bash aws iam list-roles``` and found a role called buckmaster and listed its policies. I tried to get the temporary credentials to enable me to assume that roles using this command ```bash aws sts assume-role --role-arn arn:aws:iam::123456789012:role/bucketmaster --role-session-name TBFC``` and after getting these detail i export those as variables and assumed that role. With this new role i got access the S3 bucket so i listed all buckets and found one that could contain the flag. So i tried to copy its contents to a txt file to get the flag. 
+I used the command to get to know the working id ```aws sts get-caller-identity``` and then i tried to find the IAM role by using the IAM policies attached to the current id ```aws iam list-user-policies --user-name sir.carrotbane ``` with this command. Then i listed all the roles using ```aws iam list-roles``` and found a role called buckmaster and listed its policies. I tried to get the temporary credentials to enable me to assume that roles using this command ``` aws sts assume-role --role-arn arn:aws:iam::123456789012:role/bucketmaster --role-session-name TBFC``` and after getting these detail i export those as variables and assumed that role. With this new role i got access the S3 bucket so i listed all buckets and found one that could contain the flag. So i tried to copy its contents to a txt file to get the flag. 
 
 ## Learnings:
 I learnt about the AWS system and how IAM roles are established using userIds, SecretAccessToken and also SessionTokens . Also i learnt how to assume other roles to get additional access permissions to carry out tasks.
@@ -184,10 +184,11 @@ I learnt about the AWS system and how IAM roles are established using userIds, S
 # 24. Exploitation with cURL - Hoperation Eggsploit 
 
 ## Solution:
-First i made a POST request to the /post.php endpoint with the username admin and the password admin using ```bash curl -X POST -d "username=admin&password=admin" http://10.49.156.132/post.php``` to get the first flag. Then i went on to make a request to the /cookie.php endpoint with the username admin and the password admin using ```bash curl -c cookies.txt -d "username=admin&password=admin" http://10.49.156.132/cookie.php```and save the cookie to cookies.txt using ```bash curl -b cookies.txt http://10.49.156.132/cookie.php``` to get the second flag.Then i did the brute force on the /bruteforce.php endpoint using ```bash curl -A "TBFC_SpecialAgent" http://10.49.156.132/agent.php``` and got the third flag. Then i made a request to the /agent.php endpoint with the user-agent TBFC using ```bash curl -A "TBFC_SpecialAgent" http://10.49.156.132/agent.php``` and got the final flag.
+First i made a POST request to the /post.php endpoint with the username admin and the password admin using ``` curl -X POST -d "username=admin&password=admin" http://10.49.156.132/post.php``` to get the first flag. Then i went on to make a request to the /cookie.php endpoint with the username admin and the password admin using ``` curl -c cookies.txt -d "username=admin&password=admin" http://10.49.156.132/cookie.php```and save the cookie to cookies.txt using ``` curl -b cookies.txt http://10.49.156.132/cookie.php``` to get the second flag.Then i did the brute force on the /bruteforce.php endpoint using ``` curl -A "TBFC_SpecialAgent" http://10.49.156.132/agent.php``` and got the third flag. Then i made a request to the /agent.php endpoint with the user-agent TBFC using ``` curl -A "TBFC_SpecialAgent" http://10.49.156.132/agent.php``` and got the final flag.
 
 ## Learnings:
 I learnt how to use curl to send http request to web server in the absence of a browser and also learnt how to bruteforce a user password and access session cookie using user credentials. 
+
 
 
 
